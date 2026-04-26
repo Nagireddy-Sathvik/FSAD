@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veltech Event Tickets - Sign Up</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Specific tweaks for auth layout */
+        .auth-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .auth-card {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: var(--s-4);
+        }
+
+        .auth-header h2 {
+            font-size: 2rem;
+            margin-bottom: var(--s-1);
+        }
+
+        .auth-text {
+            text-align: center;
+            color: var(--text-dark-3);
+            font-size: 0.9rem;
+            margin-top: var(--s-4);
+        }
+
+        .auth-text a {
+            color: var(--primary-main);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="booking-section auth-card">
+            <div class="auth-header">
+                <div class="pill-badge" style="margin-bottom: var(--s-3);">
+                    <i class="fa-solid fa-building-columns" style="margin-right: 8px;"></i>Veltech University
+                </div>
+                <h2>Create Account</h2>
+                <p style="color: var(--text-dark-3); font-size: 0.95rem;">Join us to easily book your event tickets</p>
+            </div>
+            
+            <form id="signupForm" action="signup_action.php" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="fullname">Full Name</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="fullname" name="fullname" class="form-input" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">University Email</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="student@veltech.edu.in" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: var(--s-4);">
+                    <label class="form-label" for="confirm-password">Confirm Password</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Sign Up
+                    <i class="fa-solid fa-user-plus"></i>
+                </button>
+
+                <div class="auth-text">
+                    Already have an account? <a href="login.html">Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
